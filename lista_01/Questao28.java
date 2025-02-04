@@ -3,7 +3,7 @@ package lista_01;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Questao16 {
+public class Questao28 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -19,14 +19,10 @@ public class Questao16 {
     }
 
     public static double factorial(double number) {
-        double factorial = 1;
-
-        if (number != 0) {
-            for (double a = 1; a <= number; a++) {
-                factorial *= a;
-            }
+        if (number == 1 || number == 0) {
+            return 1;
         }
 
-        return factorial;
+        return number * factorial(number - 1);
     }
 }

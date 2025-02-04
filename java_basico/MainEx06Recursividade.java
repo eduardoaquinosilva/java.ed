@@ -16,20 +16,20 @@ public class MainEx06Recursividade
 
 	private static void regressiva(int n)
 	{
-	     if (n == 0) // Condicao de parada
-	     {
-	         System.out.println("PAROU!");
-	     }
-	     else
-	     {
-	    	 sleep(TIME);
-	         System.out.printf("Empilhando... %d \n", n);
-	         
-	         regressiva(n-1);   // chamada recursiva
-	         
-		     sleep(TIME);
-		     System.out.printf("Desempilhando... %d \n", n);
-	     }
+		if (n == 0) // Condicao de parada
+		{
+			System.out.println("PAROU!");
+		}
+		else
+		{
+			sleep(TIME);
+			System.out.printf("Empilhando... %d \n", n);
+			
+			regressiva(n-1);   // chamada recursiva
+			
+			sleep(TIME);
+			System.out.printf("Desempilhando... %d \n", n);
+		}
 	}
 	
 	
