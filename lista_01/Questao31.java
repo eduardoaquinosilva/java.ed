@@ -36,9 +36,9 @@ public class Questao31 {
             System.out.println("\nAtualização realizada com sucesso!\n");
         }
 
-        public void delete(int id)
+        public void delete(int index)
         {
-            elements.remove(id);
+            elements.remove(index);
             System.out.println("\nRemoção realizada com sucesso!\n");
         }
     }
@@ -47,12 +47,14 @@ public class Questao31 {
     {
         Crud<Produto> products = new Crud<>();
 
-        products.create(new Produto(1, "Nome do Produto", 10.98));
+        Produto product = new Produto(1, "Nome do Produto", 10.98);
+        products.create(product);
         products.create(new Produto(5, "Outro Produto", 5.99));
         
         products.read();
 
-        products.update(new Produto(6, "Produto Atualizado", 1.99));
+        product.setPreco(10.99);
+        products.update(product);
 
         products.read();
 
