@@ -3,7 +3,7 @@ package lista_01;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Questao7 {
+public class Questao07 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

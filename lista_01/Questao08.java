@@ -2,7 +2,7 @@ package lista_01;
 
 import java.util.Scanner;
 
-public class Questao8 {
+public class Questao08 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

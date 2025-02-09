@@ -1,13 +1,13 @@
 package lista_01;
 
-public class Questao4Conta {
+public class Questao04Conta {
     private String owner;
     private String cpf;
     private double balance;
     
-    public Questao4Conta() {}
+    public Questao04Conta() {}
 
-    public Questao4Conta(String owner, String cpf) {
+    public Questao04Conta(String owner, String cpf) {
         this.owner = owner;
         this.cpf = cpf;
         this.balance = 0;
@@ -46,7 +46,7 @@ public class Questao4Conta {
         return false;
     }
 
-    public boolean tranfer(double value, Questao4Conta account) {
+    public boolean tranfer(double value, Questao04Conta account) {
         if (this.balance >= value) {
             this.balance -= value;
             account.balance += value;
@@ -79,7 +79,7 @@ public class Questao4Conta {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Questao4Conta other = (Questao4Conta) obj;
+        Questao04Conta other = (Questao04Conta) obj;
         if (Double.doubleToLongBits(balance) != Double.doubleToLongBits(other.balance))
             return false;
         return true;

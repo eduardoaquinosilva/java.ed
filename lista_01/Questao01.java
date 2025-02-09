@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Questao1 {
+public class Questao01 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
