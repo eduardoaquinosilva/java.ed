@@ -11,7 +11,7 @@ public class MainEx10ArquivoTexto
 
 	public static void main(String[] args) 
 	{
-		String path = "Unid1/temp/arquivo_texto.csv"; 	// arquivo sera criado na pasta (temp) ja criada dentro do projeto.
+		String path = "temp/arquivo_texto.csv"; 	// arquivo sera criado na pasta (temp) ja criada dentro do projeto.
 		//String path = "arquivo.txt"; 				// arquivo sera criado na raiz do projeto. (nao recomendado)
 		//String path = "/temp/arquivo.txt"; 		// arquivo criado na pasta (temp) ja criada na mesma unidade (C, D, etc) do projeto.
 		//String path = "/arquivo.txt"; 			// arquivo sera criado na raiz da mesma unidade (C, D, etc) do projeto.
