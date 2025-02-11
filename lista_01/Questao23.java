@@ -1,11 +1,12 @@
 package lista_01;
 
+import java.io.Serializable;
 import java.text.DecimalFormat;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class Questao23 {
-    static class Pessoa
+    static class Pessoa implements Comparable<Pessoa>, Serializable
     {
         private String cpf;
         private String name;
@@ -85,8 +86,9 @@ public class Questao23 {
 
         @Override
         public String toString() {
-            return "Pessoa [cpf=" + cpf + ", name=" + name + ", idade=" + idade + ", sexo=" + sexo + ", peso=" + peso
-                    + ", altura=" + altura + ", imc=" + imc + "]";
+            DecimalFormat df = new DecimalFormat("0.00");
+
+            return "Pessoa [cpf=" + cpf + ", name=" + name + ", idade=" + idade + ", sexo=" + sexo + ", peso=" + df.format(peso) + ", altura=" + df.format(altura) + ", imc=" + df.format(imc) + "]";
         }
 
         @Override
@@ -112,6 +114,11 @@ public class Questao23 {
             } else if (!cpf.equals(other.cpf))
                 return false;
             return true;
+        }
+
+        @Override
+        public int compareTo(Pessoa o) {
+            return this.cpf.compareTo(o.cpf);
         }
     }
     

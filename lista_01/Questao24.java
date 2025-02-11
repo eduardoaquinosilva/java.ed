@@ -6,25 +6,24 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
 import lista_01.Questao23.Pessoa;
 
 public class Questao24 {
-    @SuppressWarnings("unchecked")
-    private static List<Object> readFile(String path) throws IOException, ClassNotFoundException
+    private static Pessoa[] readFile(String path) throws IOException, ClassNotFoundException
     {
-        List<Object> objects = new ArrayList<Object>();
+        Pessoa[] objects;
 
         File file = new File(path);
 
         if (file.exists()) {
             ObjectInputStream objInput = new ObjectInputStream(new FileInputStream(file));
-            objects = (ArrayList<Object>) objInput.readObject();
+            objects = (Pessoa[]) objInput.readObject();
             objInput.close();
+        } else {
+            objects = new Pessoa[1];
         }
 
         return objects;
@@ -92,12 +91,11 @@ public class Questao24 {
 
         try {
             String path = "temp/questao24.dat";
-            List<Object> peopleRead = readFile(path);
+            Pessoa[] peopleRead = readFile(path);
 
-            for (Object object : peopleRead) 
+            for (Pessoa person : peopleRead) 
 			{
-				Pessoa myObj = (Pessoa) object;
-				System.out.print(myObj.toString());
+				System.out.print(person.toString());
 			}
         } catch (IOException e) {
             System.out.println("Erro na leitura do arquivo: IOException!");
