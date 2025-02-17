@@ -1,3 +1,5 @@
+package lista_02;
+
 public interface Questao01Interface <E>
 {
     void push(E element) throws StackException;

@@ -1,3 +1,5 @@
+package lista_02;
+
 public class Questao01Stack <E> implements Questao01Interface <E>
 {
     private int peek;

@@ -1,3 +1,5 @@
+package lista_02;
+
 public class Questao01Main {
     public static void main(String[] args) {
         Questao01Interface<Integer> stack = new Questao01Stack<Integer>(5);

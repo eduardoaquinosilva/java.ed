@@ -2,8 +2,8 @@ package aplicacao_pilha;
 
 import java.util.Set;
 
-import pilhas.MyInterfaceStack;
-import pilhas.MyStackArray;
+import lista_02.Questao01Interface;
+import lista_02.Questao01Stack;
 
 // Algoritmo de avaliação de expressão na notação posfixa
 public class Avaliacao {
@@ -12,7 +12,7 @@ public class Avaliacao {
         Set<Character> operators = Set.of('+', '-', '*', '/');
 
         // 1. Inicialize pilha vazia
-        MyInterfaceStack<Integer> stack = new MyStackArray<Integer>(expression.length());
+        Questao01Interface<Integer> stack = new Questao01Stack<Integer>(expression.length());
 
         // 2. Varrer a expressão
         for (int a = 0; a < expression.length(); ++a) {

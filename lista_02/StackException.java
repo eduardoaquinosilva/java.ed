@@ -1,3 +1,5 @@
+package lista_02;
+
 public class StackException extends RuntimeException 
 {
 	private static final long serialVersionUID = 4652958143051993454L;
