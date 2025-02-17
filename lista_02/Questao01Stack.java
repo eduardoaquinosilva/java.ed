@@ -14,7 +14,7 @@ public class Questao01Stack <E> implements Questao01Interface <E>
 
     public void push(E element) {
         if (this.isFull()) {
-            throw new StackException("A pilha está cheia!");
+            throw new StackQueueException("A pilha está cheia!");
         }
 
         ++peek;
@@ -24,7 +24,7 @@ public class Questao01Stack <E> implements Questao01Interface <E>
     @SuppressWarnings("unchecked")
     public E pop() {
         if (this.isEmpty()) {
-            throw new StackException("A pilha está vazia!");
+            throw new StackQueueException("A pilha está vazia!");
         }
 
         --peek;
@@ -35,7 +35,7 @@ public class Questao01Stack <E> implements Questao01Interface <E>
     @SuppressWarnings("unchecked")
     public E peek() {
         if (this.isEmpty()) {
-            throw new StackException("A pilha está vazia!");
+            throw new StackQueueException("A pilha está vazia!");
         }
 
         return (E) array[peek];
