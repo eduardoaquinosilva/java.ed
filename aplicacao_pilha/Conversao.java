@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import lista_02.Questao01Interface;
-import lista_02.Questao01Stack;
+import lista_02.Stack;
+import lista_02.StackInterface;
 
 // Algoritmo de conversão de uma expressão de infixa para posfixa
 public class Conversao {
@@ -20,7 +20,7 @@ public class Conversao {
         priorities.put('/', 3);
 
         // 1. Inicialize com uma pilha vazia
-        Questao01Interface<Character> stack = new Questao01Stack<Character>(expression.length());
+        StackInterface<Character> stack = new Stack<Character>(expression.length());
 
         // 2. Realize uma varredura na expressão (para cada caracter)
         for (int a = 0; a < expression.length(); ++a) {

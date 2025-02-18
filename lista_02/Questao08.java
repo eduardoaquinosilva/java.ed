@@ -8,7 +8,7 @@ public class Questao08 {
         Set<String> operators = Set.of("+", "-", "*", "/");
 
         // 1. Inicialize pilha vazia
-        Questao01Interface<Integer> stack = new Questao01Stack<Integer>(10);
+        StackInterface<Integer> stack = new Stack<Integer>(10);
 
         // 2. Varra a expressão:
         String[] splittedExpression = expression.split(" ");

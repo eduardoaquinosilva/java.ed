@@ -13,7 +13,7 @@ public class Questao09 {
         
         int[] vetorResultado = new int[CITIES_QUANTITY];
 
-        Questao02Interface<Integer> fila = new Questao02Queue<Integer>(CITIES_QUANTITY);
+        QueueInterface<Integer> fila = new Queue<Integer>(CITIES_QUANTITY);
 
         // 1. Inicialize todos os elementos vetorResultado com -1, exceto o elemento da cidadeInicial, que deve ser zero;
         for (int a = 0; a < CITIES_QUANTITY; ++a) {

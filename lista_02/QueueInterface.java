@@ -1,6 +1,6 @@
 package lista_02;
 
-public interface Questao02Interface <E>
+public interface QueueInterface <E>
 {
     void add(E element) throws StackQueueException;
 

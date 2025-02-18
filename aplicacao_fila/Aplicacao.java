@@ -1,7 +1,7 @@
 package aplicacao_fila;
 
-import lista_02.Questao02Interface;
-import lista_02.Questao02Queue;
+import lista_02.Queue;
+import lista_02.QueueInterface;
 
 // Conte as distâncias de uma cidade para todas as outras cidades
 public class Aplicacao {
@@ -9,15 +9,15 @@ public class Aplicacao {
         int INITIAL_CITY = 5;
         int CITIES_QUANTITY = 6;
         int[][] CITIES_DISTANCES = {{0, 3, 0, 0, 0, 0},
-                                 {0, 0, 1, 0, 0, 0},
-                                 {0, 0, 0, 0, 1, 0},
-                                 {0, 0, 2, 0, 1, 0},
-                                 {1, 0, 0, 0, 0, 0},
-                                 {0, 1, 0, 0, 0, 0}};
+                                    {0, 0, 1, 0, 0, 0},
+                                    {0, 0, 0, 0, 1, 0},
+                                    {0, 0, 2, 0, 1, 0},
+                                    {1, 0, 0, 0, 0, 0},
+                                    {0, 1, 0, 0, 0, 0}};
     
         int[] distances = new int[CITIES_QUANTITY];
     
-        Questao02Interface<Integer> queue = new Questao02Queue<Integer>(CITIES_QUANTITY);
+        QueueInterface<Integer> queue = new Queue<Integer>(CITIES_QUANTITY);
 
         // 1. Inicialize o vetor resultado com -1, exceto o elemento da cidade atual, que deve ser zero.
         for (int a = 0; a < CITIES_QUANTITY; ++a) {
